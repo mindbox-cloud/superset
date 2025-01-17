@@ -64,7 +64,7 @@ class CustomTrinoAuthErrorMeta(type):
         logger.info("is this being called?")
         return isinstance(
             instance, HttpError
-        ) and "error 401: b'Invalid credentials'" in str(instance)
+        ) and "error 401" in str(instance)
 
 
 class TrinoAuthError(HttpError, metaclass=CustomTrinoAuthErrorMeta):
