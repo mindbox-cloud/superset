@@ -100,7 +100,7 @@ ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     SUPERSET_ENV=production \
     FLASK_APP="superset.app:create_app()" \
-    PYTHONPATH="/app/pythonpath" \
+    PYTHONPATH="/app:/app/pythonpath:/app/docker/pythonpath_dev" \
     SUPERSET_HOME="/app/superset_home" \
     SUPERSET_PORT=8088
 
